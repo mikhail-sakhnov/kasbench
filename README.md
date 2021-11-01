@@ -20,7 +20,7 @@ $ ls reports
 ## Reading th report
 
 Each report includes:
-- `index.html` with interactive chart
+- `index.html` with interactive latency chart
 - `raw` binary data for vegeta
 - `report` default vegeta text report
 - `report.json` same data in json
