@@ -1,4 +1,4 @@
-module k0s-bench
+module kasbench 
 
 go 1.17
 
