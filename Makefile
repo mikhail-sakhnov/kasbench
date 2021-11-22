@@ -8,10 +8,10 @@ attack:
 
 SUITE ?= tunneled_mode.conf
 DURATION ?= 120s
+EXTRA_ARGS ?= ""
 
 suite: .dockerfilestamp
-	mkdir -p report_$(SUITE)
-	docker run -e DURATION=$(DURATION) --rm -v $(PWD)/kubeconfigs/$(SUITE):/kubeconfig -v $(PWD)/reports/report_$(SUITE):/report vegeta
+	docker run -e DURATION=$(DURATION)  --rm -v $(PWD)/kubeconfigs/$(SUITE):/kubeconfig -v $(PWD)/reports/report_$(SUITE):/report vegeta
 
 .PHONY: all
 all: .dockerfilestamp
